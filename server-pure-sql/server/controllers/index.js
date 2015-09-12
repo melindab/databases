@@ -22,8 +22,7 @@ module.exports = {
     // Ditto as above
     get: function (req, res) {
       models.users.get(function(users) {
-        console.log(users);
-        res.send(JSON.stringify(users));
+         res.send(JSON.stringify(users));
       })
     },
     post: function (req, res) {
