@@ -21,10 +21,10 @@ var messages = sequelize.define('messages', {
 });
 
 users.hasMany(messages);
-messages.belongsTo(users)
+messages.belongsTo(users);
 sequelize.sync().then(function() {
   console.log("SYNCED");
-})
+});
 
 module.exports.users = users;
 module.exports.messages = messages;
